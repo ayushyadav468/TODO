@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+			integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./app/style.css" />
+		<title>TODO</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>TODO App</h1>
+		</header>
+		<section>
+			<form>
+				<label for="name">Name</label>
+				<input
+					name="name"
+					class="todo-input-name"
+					type="text"
+					placeholder="Enter your name.."
+				/>
+				<label for="todo-text-area">TODO</label>
+				<textarea
+					name="todo-text-area"
+					class="todo-input-todo"
+					placeholder="Enter a TODO.."
+				></textarea>
+				<div class="message-and-button">
+					<input class="todo-submit-button" type="submit" value="ADD" />
+				</div>
+			</form>
+		</section>
+		<div class="todo-container"></div>
+		<script src="./app/app.js"></script>
+	</body>
+</html>
