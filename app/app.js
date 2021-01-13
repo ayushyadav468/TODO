@@ -11,12 +11,18 @@ todo = {
 };
 
 // event listeners
+document.addEventListener('DOMContentLoaded', () => {
+	getFromLocalStorage();
+});
+
 addBtn.addEventListener('click', (event) => {
 	event.preventDefault();
 	todo.text = todoText.value;
 	todoText.value = '';
 	// Add TODO to DOM
 	addTodo(todo);
+	// Add to local storage
+	addTODOToLocalStorage(todo);
 });
 
 todoContainer.addEventListener('click', (event) => {
@@ -41,8 +47,7 @@ const addTodo = (todo) => {
 	if (todo.isCompleted) {
 		newPara.classList.add('completed');
 	}
-	// Add to local storage
-	addTODOToLocalStorage(todo);
+
 	// Add elements to DOM
 	todoContainer.appendChild(newLI);
 	newLI.appendChild(newPara);
@@ -79,6 +84,18 @@ const addTODOToLocalStorage = (todo) => {
 	}
 	todos.push(todo);
 	localStorage.setItem('todos', JSON.stringify(todos));
+};
+
+const getFromLocalStorage = () => {
+	let todos;
+	if (localStorage.getItem('todos') === null) {
+		todos = [];
+	} else {
+		todos = JSON.parse(localStorage.getItem('todos'));
+	}
+	todos.forEach((todo) => {
+		addTodo(todo);
+	});
 };
 
 const removeTODOFromLocalStorage = (todo) => {
