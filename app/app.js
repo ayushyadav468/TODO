@@ -14,6 +14,7 @@ todo = {
 addBtn.addEventListener('click', (event) => {
 	event.preventDefault();
 	todo.text = todoText.value;
+	todoText.value = '';
 	// Add TODO to DOM
 	addTodo(todo);
 });
@@ -40,17 +41,20 @@ const addTodo = (todo) => {
 	if (todo.isCompleted) {
 		newPara.classList.add('completed');
 	}
-
+	// Add to local storage
+	addTODOToLocalStorage(todo);
 	// Add elements to DOM
 	todoContainer.appendChild(newLI);
 	newLI.appendChild(newPara);
 	newLI.appendChild(deleteBtn);
 };
 
+// Delete and check TODO
 const manipulateTodo = (event, todo) => {
 	const itemClicked = event.target;
 	if (itemClicked.classList[3] === 'delete') {
 		const todoParent = itemClicked.parentElement;
+		removeTODOFromLocalStorage(todoParent);
 		todoParent.remove();
 	}
 	if (itemClicked.classList[0] === 'todo-list') {
@@ -63,4 +67,37 @@ const manipulateTodo = (event, todo) => {
 		todoPara.classList.toggle('completed');
 		todo.isCompleted = !todo.isCompleted;
 	}
+};
+
+// Store in local storage
+const addTODOToLocalStorage = (todo) => {
+	let todos;
+	if (localStorage.getItem('todos') === null) {
+		todos = [];
+	} else {
+		todos = JSON.parse(localStorage.getItem('todos'));
+	}
+	todos.push(todo);
+	localStorage.setItem('todos', JSON.stringify(todos));
+};
+
+const removeTODOFromLocalStorage = (todo) => {
+	let todos;
+	if (localStorage.getItem('todos') === null) {
+		todos = [];
+	} else {
+		todos = JSON.parse(localStorage.getItem('todos'));
+	}
+	const todoInnerText = todo.children[0].innerText;
+	let todoIndex;
+	let temp = 0;
+	todos.forEach((todo) => {
+		if (todo.text === todoInnerText) {
+			todoIndex = temp;
+			return;
+		}
+		temp += 1;
+	});
+	todos.splice(todoIndex, 1);
+	localStorage.setItem('todos', JSON.stringify(todos));
 };
