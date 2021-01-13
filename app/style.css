@@ -59,6 +59,7 @@ video {
 
 .todo-input {
 	width: 85%;
+	height: 2rem;
 	background-color: #fff;
 	padding: 4px;
 	font-family: 'Poppins', sans-serif;
