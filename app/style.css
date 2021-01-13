@@ -108,8 +108,14 @@ video {
 
 .todo-text {
 	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.completed {
+	text-decoration: line-through;
 }
 
 .delete {
 	font-size: 1.5rem;
+	background: none;
 }
