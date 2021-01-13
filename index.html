@@ -9,8 +9,8 @@
 		/>
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-			integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+			href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+			integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="./app/style.css" />
@@ -18,29 +18,22 @@
 	</head>
 
 	<body>
-		<header>
-			<h1>TODO App</h1>
-		</header>
-		<section>
-			<form>
-				<label for="name">Name</label>
-				<input
-					name="name"
-					class="todo-input-name"
-					type="text"
-					placeholder="Enter your name.."
-				/>
-				<label for="todo-text-area">TODO</label>
-				<textarea
-					name="todo-text-area"
-					class="todo-input-todo"
-					placeholder="Enter a TODO.."
-				></textarea>
-				<div class="message-and-button">
-					<input class="todo-submit-button" type="submit" value="ADD" />
-				</div>
-			</form>
+		<video src="./src/background_video.mp4" autoplay mute loop></video>
+		<section class="content">
+			<div class="card">
+				<h1 class="heading">TODO App</h1>
+				<form class="form">
+					<textarea
+						class="todo-input"
+						placeholder="Enter a TODO.."
+						required
+					></textarea>
+					<input class="todo-add-button" type="submit" value="ADD" />
+					<div class="message"></div>
+				</form>
+			</div>
 		</section>
+		<!-- dynamically generated TODO -->
 		<div class="todo-container"></div>
 		<script src="./app/app.js"></script>
 	</body>

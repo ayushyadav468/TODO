@@ -3,67 +3,83 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
-	font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
+	height: 100vh;
 }
-header {
-	font-size: 1.5rem;
-}
-header,
-section {
-	margin: 5%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-form {
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	min-width: 70%;
-	padding: 1rem;
-	background-color: #f2f2f2;
-	box-shadow: 3px 3px 10px grey;
-}
-label {
-	margin: 5px;
-}
-input[type="text"],
-textarea {
+
+video {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
-	padding: 15px;
-	border: 1px solid #ccc;
-	resize: vertical;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.8;
 }
-.message-and-button {
-	margin-top: 0.5rem;
-	padding: 0.5rem;
-	padding-right: 0rem;
+
+.content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+.card {
+	width: 65%;
+	margin: 4rem auto 0 auto;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: rgba(255, 255, 255, 0);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	/* backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px); */
+}
+
+.heading {
+	font-size: 2.5em;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.form {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
 }
-.message-and-button .message {
-	padding: 0.5rem;
-	font-size: 15px;
-	flex: 1;
-}
-.message-and-button .message p {
-	float: right;
-}
-input[type="submit"] {
-	background-color: #4caf50;
-	color: white;
-	padding: 15px;
-	min-width: 20%;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-input[type="submit"]:hover {
-	background-color: #45a049;
-}
-input,
-textarea:focus {
+
+.todo-input {
+	width: 85%;
+	background-color: #fff;
+	padding: 4px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
 	outline: none;
+	resize: none;
+	border: none;
+}
+
+.todo-add-button {
+	padding: 2px 15px;
+	font-size: 1.2em;
+	color: white;
+	outline: none;
+	background: rgba(255, 255, 255, 0);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.28);
+}
+.todo-add-button:hover,
+.todo-add-button:active {
+	font-size: 1.4em;
+	border: 1px solid rgba(255, 255, 255, 0.5);
 }
