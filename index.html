@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -18,19 +19,21 @@
 	</head>
 
 	<body>
-		<video src="./src/background_video.mp4" autoplay mute loop></video>
-		<section class="content">
+		<video src="./src/background_video.mp4" mute autoplay loop>
+			Video is not supported
+		</video>
+		<section class="main-section">
 			<div class="card">
-				<h1 class="heading">TODO App</h1>
-				<form class="form">
+				<h1 class="card-heading">TODO App</h1>
+				<form class="card-form">
 					<textarea
-						class="todo-input"
+						class="card-input"
 						placeholder="Enter a TODO.."
 						rows="1"
 						required
 					></textarea>
-					<input class="todo-add-button" type="submit" value="ADD" />
-					<div class="message"></div>
+					<input class="card-add-button" type="submit" value="ADD" />
+					<div class="card-message"></div>
 				</form>
 			</div>
 			<!-- dynamically generated TODO -->

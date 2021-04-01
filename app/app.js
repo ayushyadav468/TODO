@@ -1,8 +1,8 @@
 // selectors
-const todoText = document.querySelector('.todo-input');
+const todoText = document.querySelector('.card-input');
 const todoContainer = document.querySelector('.todo-added');
 // const messagediv = document.querySelector('.message-and-button');
-const addBtn = document.querySelector('.todo-add-button');
+const addBtn = document.querySelector('.card-add-button');
 
 // TODO object
 todo = {

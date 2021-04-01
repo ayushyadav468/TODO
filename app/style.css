@@ -1,122 +1,174 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
-	height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
 }
 
 video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
 }
 
-.content {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
+.main-section {
+  width: 100%;
 }
 
 .card {
-	width: 65%;
-	margin: 4rem auto 2.5rem auto;
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	background: rgba(255, 255, 255, 0);
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.28);
-	backdrop-filter: blur(4px);
-	-webkit-backdrop-filter: blur(4px);
+  width: 95%;
+  margin: 2rem auto 2.5rem auto;
+  padding: 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
-.heading {
-	font-size: 2.5em;
-	font-weight: bold;
-	color: white;
-	text-align: center;
-	text-transform: uppercase;
+.card-heading {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.form {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+.card-form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.todo-input {
-	width: 85%;
-	height: 2rem;
-	background-color: #fff;
-	padding: 4px;
-	font-family: 'Poppins', sans-serif;
-	font-size: 14px;
-	outline: none;
-	resize: none;
-	border: none;
+.card-input {
+  width: 70%;
+  background-color: #fff;
+  padding: 0.6rem;
+  font-weight: 300;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  border: none;
+  border-radius: 5px;
 }
 
-.todo-add-button {
-	padding: 2px 15px;
-	font-size: 1.2em;
-	color: white;
-	outline: none;
-	background: rgba(255, 255, 255, 0);
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.28);
+.card-add-button {
+  width: 20%;
+  padding: 2px 0px;
+  font-size: 1.2em;
+  color: white;
+  outline: none;
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.28);
 }
-.todo-add-button:hover,
-.todo-add-button:active {
-	font-size: 1.4em;
-	border: 1px solid rgba(255, 255, 255, 0.5);
+
+.card-add-button:hover, .card-add-button:active {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 0px 10px 2px white;
+          box-shadow: 0px 0px 10px 2px white;
 }
 
 .todo-added {
-	color: white;
-	list-style: none;
+  color: white;
+  list-style: none;
 }
 
 .todo-list {
-	width: 65%;
-	height: 3rem;
-	margin: 1rem auto;
-	padding: 1rem 2rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	background: rgba(255, 255, 255, 0);
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.28);
-	backdrop-filter: blur(4px);
-	-webkit-backdrop-filter: blur(4px);
+  width: 95%;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.4);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.4);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .todo-text {
-	font-size: 1.2rem;
-	cursor: pointer;
+  width: 90%;
+  font-weight: 400;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .completed {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .delete {
-	font-size: 1.5rem;
-	background: none;
+  font-size: 1.5rem;
+  background: none;
 }
+
+@media screen and (min-width: 601px) {
+  .card {
+    width: 85%;
+    max-width: 750px;
+    margin: 4rem auto 2.5rem auto;
+    padding: 1rem 1.2rem;
+  }
+  .card-heading {
+    margin-bottom: 0rem;
+  }
+  .card-input {
+    width: 80%;
+  }
+  .card-add-button {
+    width: 15%;
+  }
+  .todo-list {
+    width: 85%;
+    max-width: 750px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
