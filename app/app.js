@@ -20,9 +20,12 @@ addBtn.addEventListener('click', (event) => {
 	todo.text = todoText.value;
 	todoText.value = '';
 	// Add TODO to DOM
-	addTodo(todo);
-	// Add to local storage
-	addTODOToLocalStorage(todo);
+	// if text is not a empty string
+	if (todo.text !== '') {
+		addTodo(todo);
+		// Add to local storage
+		addTODOToLocalStorage(todo);
+	}
 });
 
 todoContainer.addEventListener('click', (event) => {
